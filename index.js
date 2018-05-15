@@ -5,7 +5,7 @@ const requireDir = require('require-dir');
 const bodyParser = require('body-parser');
 const dbConfig = require('./config/database');
 
-mongoose.connect(dbConfig.url);
+mongoose.connect(dbConfig.url); // não está como localhost
 requireDir(dbConfig.modelsPath);
 
 app.use(bodyParser.json());
